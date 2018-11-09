@@ -15,36 +15,32 @@
       <div class="col-sm-12 col-md-12 col-sm-12">
         <header>
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
-            <a class="navbar-brand" href="/"><img src="../css/bookrv.png" width="50px" height="50px"></a>
+            <a class="navbar-brand" href="user-home"><img src="../css/bookrv.png" width="50px" height="50px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="user-home">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about">About</a>
+                  <a class="nav-link" href="user-about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="books">Books</a>
+                  <a class="nav-link" href="user-books">Books</a>
                 </li>
-                <div class="line">
-                  <svg height="30" width="5">
-                    <line x1="5" y1="10" x2="5" y2="50" style="stroke:rgb(141,141,141);stroke-width:1" />
-                      </svg>
-                </div>
+                <li class="nav-item ">
+                  <a class="nav-link active" href="user-cart">Cart</a>
+                </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="signin">Sign In</a>
-                </li>
+                <a href="signin">  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log out</button> </a>
+
               </ul>
-
             </div>
           </div>
           </div>
-        </div>
+</div>
           </nav>
         </header>
 
@@ -61,7 +57,7 @@
               <p style="font-size:24px; color:#11311b;">BookRV lets you reserve your library books online.</p>
             </div>
 
-          <a href="signin"> <button class="btn btn-lg btn-success">Reserve now</button> </a>
+          <a href="user-books"> <button class="btn btn-lg btn-success">Reserve now</button> </a>
           </div>
         </div>
 
@@ -111,16 +107,22 @@
       </div>
 
       <footer>
+        <div class="container-fluid">
 
-               <div class="row featurette text-center">
-                 <div class="col-md-12" id="footer-content">
+               <div class="row featurette text-center" id="footer">
 
+
+                 <div class="col-md-1"></div>
+
+                 <div class="col-md-10" id="footer-content">
+                   <hr id="footer-line">
                    <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
                  </div>
 
+                 <div class="col-md-1"></div>
 
              </div>
-
+       </div>
       </footer>
 
 
@@ -130,6 +132,6 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.js"></script>
 
-
 </body>
+
 </html>

@@ -1,4 +1,8 @@
 <?php include './controller/submit-signin.php';?>
+<?php
+session_start();
+$error = "";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -46,7 +50,7 @@
             </div>
           </div>
           </div>
-</div>
+        </div>
           </nav>
         </header>
 
@@ -62,7 +66,10 @@
           <h1> Sign In</h1>
          </div>
 
+
+
          <div class="col-md-5"></div>
+
 
          <div class="col-md-5"></div>
 
@@ -112,31 +119,22 @@
          </div>
 
          <div class="col-md-5"></div>
-</div>
+       </div>
      </div>
-
-     <hr id="footer-line">
-     <footer>
-       <div class="container-fluid">
-              <div class="row featurette text-center" id="footer">
-
-
-                <div class="col-md-1"></div>
-
-                <div class="col-md-10" id="footer-content">
-
-                  <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
-                </div>
-
-                <div class="col-md-1"></div>
-
-            </div>
-      </div>
-     </footer>
-
-
-       <script src="../js/jquery.min.js"></script>
-       <script src="../js/bootstrap.js"></script>
-
 </div>
+<footer>
+        <div class="row" id="footer">
+          <div class="col-md-12" id="footer-content">
+            <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
+          </div>
+      </div>
+</footer>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
 </body>
+</html>
+<?php
+    unset($_SESSION["error"]);
+?>

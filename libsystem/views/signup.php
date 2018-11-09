@@ -120,25 +120,24 @@
 					 </div>
 
 
-
-             <hr id="footer-line">
-             <footer>
-               <div class="container-fluid">
-                      <div class="row featurette text-center" id="footer">
+					 <footer>
 
 
-                        <div class="col-md-1"></div>
+			              <div class="row featurette text-center" id="footer">
 
-                        <div class="col-md-10" id="footer-content">
 
-                          <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
-                        </div>
 
-                        <div class="col-md-1"></div>
 
-                    </div>
-              </div>
-             </footer>
+			                <div class="col-md-12" id="footer-content">
+
+			                  <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
+			                </div>
+
+
+
+			            </div>
+
+			     </footer>
 
           <script src="../js/jquery.min.js"></script>
           <script src="../js/bootstrap.js"></script>

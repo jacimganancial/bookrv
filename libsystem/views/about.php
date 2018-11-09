@@ -58,6 +58,7 @@
               <p class="lead">The TSU Libraries are learning centers whereby students, faculty, and other library clients do their intellectual activity. Each Library offers services and collections specific to the academic needs of the College or Department.
               </p>
             </div>
+						  <div class="col-md-1"></div>
           </div>
         </div>
 
@@ -82,23 +83,18 @@
 
         </div>
       </div>
-			<hr id="footer-line">
+
+<div class="container-fluid">
+
+</div>
 			<footer>
-				<div class="container-fluid">
-							 <div class="row featurette text-center" id="footer">
-
-
-								 <div class="col-md-1"></div>
-
-								 <div class="col-md-10" id="footer-content">
-
+							 <div class="row" id="footer">
+								 <div class="col-md-12" id="footer-content">
 									 <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
 								 </div>
-
-								 <div class="col-md-1"></div>
-
 						 </div>
-			 </div>
+			</footer>
+		</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>

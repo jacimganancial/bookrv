@@ -43,6 +43,25 @@ switch ($uri[1])
         case 'user-index':
             require './views/user-index.php';
             break;
+    //Sign up page
+        case 'user-home':
+            require './views/user-home.php';
+            break;
+
+    //Sign up page
+        case 'user-about':
+            require './views/user-about.php';
+            break;
+
+    //Sign up page
+        case 'user-books':
+            require './views/user-books.php';
+            break;
+
+    //Sign up page
+        case 'user-cart':
+            require './views/user-cart.php';
+            break;
 
 	//Error
     default:

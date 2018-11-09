@@ -1,10 +1,10 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "bookrv";
 
-$msg='right username and password';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,11 +25,14 @@ if (isset($_POST['signin_btn'])){
   	if(mysqli_num_rows($resultsignin) > 0)
     {
       	echo '<script>window.location.href = "user-index";</script>';
+
     }
 
     else {
-
-    
-
+      function phpAlert($msg){
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
     }
-  }
+    phpAlert( "Invalid Account");
+    }
+    }
+    
