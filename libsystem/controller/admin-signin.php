@@ -4,11 +4,11 @@ ob_start();
 session_start();
 
 
-
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "bookrv";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,13 +18,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$stud_num = $_POST['stud_num'];
-$pass = $_POST['password'];
+$_SESSION['acc_num'] = $_POST['acc_num'];
+$_SESSION['password'] = $_POST['password'];
 
-$_SESSION['stud_num'] = $stud_num;
-$_SESSION ['password'] =  $pass;
+$acc_num  = $_SESSION['acc_num'];
+$pass = $_SESSION ['password'];
 
-$sql = "SELECT * FROM accounts where stud_num LIKE '%" . mysqli_real_escape_string($conn, $_SESSION['stud_num']) . "'";
+$sql = "SELECT fname FROM accounts where stud_num LIKE '%" . mysqli_real_escape_string($conn, $acc_num) . "'";
 $result = $conn->query($sql);
 
 
@@ -33,17 +33,15 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $displayname = $row["fname"];
     }
-}
-else {
+} else {
     echo "0 results";
 }
-
         $msg = '';
 
-        if (isset($_POST['signin_btn']) && !empty($_POST['stud_num'])
+        if (isset($_POST['signin_btn']) && !empty($_POST['acc_num'])
            && !empty($_POST['password'])) {
 
-             $querysignin = "SELECT * FROM accounts WHERE stud_num LIKE '$stud_num' && password LIKE '$pass'";
+             $querysignin = "SELECT * FROM accounts WHERE stud_num LIKE '$acc_num' && password LIKE '$pass'";
              $resultsignin = mysqli_query($conn, $querysignin);
 
              if(mysqli_num_rows($resultsignin) > 0)
@@ -52,7 +50,9 @@ else {
                 $_SESSION['valid'] = true;
                 $_SESSION['timeout'] = time();
 
-               header ('location:user-index');
+                echo 'You have entered valid use name and password';
+
+               header ('location:admin-home');
              }
            else
            {

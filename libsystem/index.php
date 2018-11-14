@@ -37,7 +37,7 @@ switch ($uri[1])
         break;
     //Sign up page
         case 'upload-students':
-            require './views/upload-students.php';
+            require './controller/upload-students.php';
             break;
     //Sign up page
         case 'user-index':
@@ -62,6 +62,35 @@ switch ($uri[1])
         case 'user-cart':
             require './views/user-cart.php';
             break;
+
+    //Sign up page
+        case 'admin-home':
+            require './views/admin-home.php';
+            break;
+    //Sign up page
+      case 'admin-login':
+          require './views/admin-login.php';
+          break;
+
+    //Sign up page
+        case 'signout':
+            require './controller/signout.php';
+            break;
+
+      case 'display-name':
+          require './controller/display-name.php';
+          break;
+
+        case 'display':
+            require './views/display.php';
+            break;
+
+            case 'upload-students':
+                require './controller/upload-students.php';
+                break;
+
+
+
 
 	//Error
     default:

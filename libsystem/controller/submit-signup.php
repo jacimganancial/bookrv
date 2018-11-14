@@ -1,5 +1,8 @@
 
 								<?php
+
+
+
 								$servername = "localhost";
 								$username = "root";
 								$password = "";
@@ -22,6 +25,7 @@
 				$stud_num = $_POST['stud_num'];
 				$email = $_POST['email'];
 				$password = $_POST['password'];
+				$role = 'STUDENT';
 
 
 					// Check for exisiting accounts
@@ -40,12 +44,15 @@
 
 				if(mysqli_num_rows($resultstud_num) === 0){
 					if(mysqli_num_rows($resultem) === 0){
-						if(mysqli_num_rows($resultstudent) !== 0){
+						if(mysqli_num_rows($resultstudent) > 0){
 
 								$sql = "INSERT INTO accounts (
 									fname,
 									lname,
-									stud_num, email, password
+									stud_num,
+									email,
+									password,
+									role
 								)
 
 								VALUES (
@@ -53,12 +60,15 @@
 								'$lname',
 								'$stud_num',
 								'$email',
-								'$password')";
+								'$password',
+								'$role')";
 
 
 								if ($conn->query($sql) === TRUE) {
 
-								echo '<script>window.location.href = "user-index";</script>';
+									header('location:user-index');
+									$_SESSION['stud_num'] = $_POST['stud_num'];
+									$_SESSION['password'] = $_POST['password'];
 
 								} else {
 								    echo "Error: " . $sql . "<br>" . $conn->error;

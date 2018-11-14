@@ -84,9 +84,7 @@
         </div>
       </div>
 
-<div class="container-fluid">
 
-</div>
 			<footer>
 							 <div class="row" id="footer">
 								 <div class="col-md-12" id="footer-content">

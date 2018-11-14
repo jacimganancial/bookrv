@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,63 +52,20 @@
           </nav>
         </header>
 
-
 				<div class="container-fluid" id="book-table">
-          <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">Title</th>
-      <th scope="col">Author</th>
-      <th scope="col">Available</th>
+					<table class="table">
+			<thead>
+			<tr>
+			<th scope="col">No.</th>
+			<th scope="col">Title</th>
+			<th scope="col">Author</th>
+			<th scope="col">Available</th>
 			<th scope="col">Description</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Introduction to Programming</td>
-			<td>Introduction to Programming</td>
-			<td>Introduction to Programming</td>
-			<td>Introduction to Programming</td>
+			</tr>
+			</thead>
 
 
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-			<td>Introduction to Programming</td>
 
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-			<td>Introduction to Programming</td>
-    </tr>
-		<tr>
-			<th scope="row">3</th>
-			<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-			<td>Introduction to Programming</td>
-		</tr>
-		<tr>
-			<th scope="row">3</th>
-			<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-			<td>Introduction to Programming</td>
-		</tr>
-
-		</tr>
-  </tbody>
-</table>
-</div>
 
 <footer>
 				 <div class="row" id="footer">
@@ -123,3 +81,5 @@
 </body>
 
 </html>
+
+<?php include './controller/display-books.php';?>

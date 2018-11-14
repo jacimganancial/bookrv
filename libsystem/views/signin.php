@@ -1,8 +1,7 @@
-<?php include './controller/submit-signin.php';?>
 <?php
-session_start();
-$error = "";
+  include './controller/submit-signin.php';
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -10,9 +9,9 @@ $error = "";
   <meta charset="utf-8"/>
   <title>Bookrv: Reserve books online</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../img/logo.png">
 </head>
 
 <body>
@@ -135,6 +134,3 @@ $error = "";
   <script src="../js/bootstrap.js"></script>
 </body>
 </html>
-<?php
-    unset($_SESSION["error"]);
-?>

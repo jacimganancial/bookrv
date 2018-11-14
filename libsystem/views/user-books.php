@@ -1,3 +1,16 @@
+<?php
+// You'd put this code at the top of any "protected" page you create
+
+// Always start this first
+ session_start();
+if (isset($_SESSION['valid']) && $_SESSION['valid'] == true) {
+
+} else {
+  header ('location: signin');
+}
+
+include './controller/submit-signin.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,10 +46,14 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="user-cart">Cart</a>
                 </li>
-
-                <a href="signin">  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log out</button> </a>
+                <li class="nav-item">
+                  <p class="display-name">Welcome, <?php echo $displayname;?>!</p>
+                </li>
 
               </ul>
+              <a href="signout">  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log out</button> </a>
+
+              </div>
             </div>
           </div>
           </div>
@@ -44,85 +61,48 @@
           </nav>
         </header>
 
-        				<div class="container-fluid" id="book-table">
-                  <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">No.</th>
-              <th scope="col">Title</th>
-              <th scope="col">Author</th>
-              <th scope="col">Available</th>
-        			<th scope="col">Description</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Introduction to Programming</td>
-        			<td>Introduction to Programming</td>
-        			<td>Introduction to Programming</td>
-        			<td>Introduction to Programming</td>
 
 
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-        			<td>Introduction to Programming</td>
+          				<div class="container-fluid" id="book-table">
+                    <table class="table">
+                      <div class="container" id="t-header">
+                        <thead class="thead">
+                          <tr>
 
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-        			<td>Introduction to Programming</td>
-            </tr>
-        		<tr>
-        			<th scope="row">3</th>
-        			<td>Larry</td>
-        			<td>the Bird</td>
-        			<td>@twitter</td>
-        			<td>Introduction to Programming</td>
-        		</tr>
-        		<tr>
-        			<th scope="row">3</th>
-        			<td>Larry</td>
-        			<td>the Bird</td>
-        			<td>@twitter</td>
-        			<td>Introduction to Programming</td>
-        		</tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Available</th>
+                            <th scope="col">Description</th>
 
-        		</tr>
-          </tbody>
-        </table>
+
+                          </tr>
+                        </thead>
+                      </div>
 
 
 
 
-              </div>
+
+              <?php
+
+              include './controller/display-books.php';
+
+               ?>
+
+    </div>
               <footer>
-                <div class="container-fluid">
 
-                       <div class="row featurette text-center" id="footer">
+                       <div class="row featurette text-center">
+                         <div class="col-md-12" id="footer-content">
 
-
-                         <div class="col-md-1"></div>
-
-                         <div class="col-md-10" id="footer-content">
-                           <hr id="footer-line">
                            <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
                          </div>
 
-                         <div class="col-md-1"></div>
 
                      </div>
-               </div>
-              </footer>
 
+              </footer>
 
 
 

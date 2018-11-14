@@ -1,3 +1,17 @@
+<?php
+// You'd put this code at the top of any "protected" page you create
+
+// Always start this first
+ session_start();
+if (isset($_SESSION['valid']) && $_SESSION['valid'] == true) {
+
+} else {
+  header ('location: signin');
+}
+
+include './controller/submit-signin.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,10 +47,14 @@
                 <li class="nav-item ">
                   <a class="nav-link active" href="user-cart">Cart</a>
                 </li>
-
-                <a href="signin">  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log out</button> </a>
+                <li class="nav-item">
+                  <p class="display-name">Welcome, <?php echo $displayname;?>!</p>
+                </li>
 
               </ul>
+              <a href="signin">  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log out</button> </a>
+
+              </div>
             </div>
           </div>
           </div>
@@ -107,23 +125,18 @@
       </div>
 
       <footer>
-        <div class="container-fluid">
 
-               <div class="row featurette text-center" id="footer">
+               <div class="row featurette text-center">
+                 <div class="col-md-12" id="footer-content">
 
-
-                 <div class="col-md-1"></div>
-
-                 <div class="col-md-10" id="footer-content">
-                   <hr id="footer-line">
                    <p class="font-weight-light">BookRV &copy 2018 Tarlac State University. All rights reserved.</p>
                  </div>
 
-                 <div class="col-md-1"></div>
 
              </div>
-       </div>
+
       </footer>
+
 
 
 
